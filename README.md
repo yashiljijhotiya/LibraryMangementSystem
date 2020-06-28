@@ -1,34 +1,42 @@
-# LibraryClientApp
+# Library Mangement System
+This project is developed to manage Books in the Library. It is designed and developed in layered fashion.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+1. Interaction Layer for Users - [LibraryClientApp](https://github.com/yashiljijhotiya/LibraryMangementSystem/tree/master/LibraryClientApp)
+2. Backend API Server - [LibraryAPIServer](https://github.com/yashiljijhotiya/LibraryMangementSystem/tree/master/LibraryAPIServer)
 
-## Pre-installation required
-After cloning project Run `npm install` to install all the dependencies for both client and backend app. 
+### Features
+1. Add Books (Book Information, Author Information)
+2. Edit Books (Book Information, Author Information)
+3. Delete Book 
+4. View All Books
+5. Search Books by Name
 
-## Development server for client App
+## Technology Used
+### Client App
+1. [Angular](https://angular.io/) 9.1.9
+2. [NgRX](https://ngrx.io/) for Redux.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Backend Server
+1. [NodeJs](https://nodejs.org/en/) 
+2. [NodeJs Express](https://expressjs.com/)
 
-## Development server for Backend Server 
+### Backend Database for Books
+1. JSON file store - [book.json](https://github.com/yashiljijhotiya/LibraryMangementSystem/blob/master/LibraryAPIServer/data_store/book.json)
 
-Run `nodemon index.js` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+# Deployment
+## Dependency Requirements
+1. Install NodeJS v12.18.1 and Node Package Manager npm 6.14.5
+2. Install Angular CLI  `npm install -g @angular/cli` 
+3. Clone the project LibraryMangementSystem `git clone https://github.com/yashiljijhotiya/LibraryMangementSystem.git`
 
-## Code scaffolding
+## Setup and Run LibraryAPIServer
+1. Goto LibraryAPIServer
+2. `cd LibraryAPIServer`
+3. `npm install` //Install all the required dependencies
+3. `nodemon index.js` // Will run the Backend server on `http://localhost:3000/`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Setup and Run LibraryClientApp
+1. Goto LibraryClientapp
+2. `cd LibraryClientApp`
+3. `npm install` //Install all the required dependencies
+3. `ng serve` // Will run the Client App on `http://localhost:4200/`
