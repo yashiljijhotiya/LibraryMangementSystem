@@ -30,7 +30,7 @@ export class BookAddComponent implements OnInit {
       let formValue = this.bookService.formGroup.value;
       this.book = {
         id: formValue.id,
-        title: formValue.title,
+        title: formValue.title.toUpperCase(),
         description: formValue.description,
         author: formValue.author,
         publisher: formValue.publisher,
@@ -48,8 +48,11 @@ export class BookAddComponent implements OnInit {
       }
       this.router.navigateByUrl('');
     }
-    else {
-      this.notificationService.error("Something Went Wrong!!");
-    }
+    this.bookService.formGroup.reset();
+  }
+
+  clear(){
+    this.bookService.formGroup.reset();
+    this.router.navigateByUrl('');
   }
 }

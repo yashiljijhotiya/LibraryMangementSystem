@@ -40,12 +40,14 @@ export class BookListComponent implements OnInit {
   }
 
   delete(id){
+    if(confirm('Are you sure you want to delete?')){
     this.store.dispatch(new DeleteItemAction(id));
     this.notificationService.success("Deleted Successfully!!");
+    }
   }
 
   search(val: HTMLInputElement){
-    this.store.dispatch(new SearchItemAction(val.value));
+    this.store.dispatch(new SearchItemAction(val.value.toUpperCase()));
   }
 
 }

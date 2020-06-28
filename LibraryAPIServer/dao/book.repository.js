@@ -51,14 +51,6 @@ exports.update = function (data) {
     const book = fs.readFileSync(filePath);
     const parseData = JSON.parse(book);
     const record = parseData.filter(i => i.id !== parseInt(data.id));
-    // const record = parseData.map(book =>  {
-    //     if(book.id === Number(data.id)){
-    //         return updatedRecord;
-    //     }
-    //     else{
-    //         return book;
-    //     }
-    // });
     record.push(data);
     fs.writeFileSync(filePath, JSON.stringify(record));
     return data;
