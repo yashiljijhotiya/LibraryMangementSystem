@@ -4,6 +4,9 @@ This project is developed to manage Books in the Library. It is designed and dev
 1. Interaction Layer for Users - [LibraryClientApp](https://github.com/yashiljijhotiya/LibraryMangementSystem/tree/master/LibraryClientApp)
 2. Backend API Server - [LibraryAPIServer](https://github.com/yashiljijhotiya/LibraryMangementSystem/tree/master/LibraryAPIServer)
 
+### Demo
+Video demonstration of the project can be found [here](https://drive.google.com/file/d/1xPVXVoUNpF6KCo9_1diWIruaGZQbIcNx/view?usp=sharing).
+
 ### Features
 1. Add Books (Book Information, Author Information)
 2. Edit Books (Book Information, Author Information)
