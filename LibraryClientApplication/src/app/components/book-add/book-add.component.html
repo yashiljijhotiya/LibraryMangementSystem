@@ -1,0 +1,21 @@
+<div class="container">
+<form [formGroup] = "bookService.formGroup" (ngSubmit)="submit()">
+    <label>Title</label>
+    <input type="text" formControlName = "title">
+    <label>Description</label>
+    <input type="text" formControlName = "description">
+    <label>Author</label>
+    <input type="text" formControlName = "author">
+    <label>Publisher</label>
+    <input type="text" formControlName = "publisher">
+    <label>Price</label>
+    <input type="text" formControlName = "price">
+    <label>Pages</label>
+    <input type="text" formControlName = "pages">
+    <label>quantity</label>
+    <input type="text" formControlName = "count">
+    <div class="form-group">
+        <button class="btn ">Submit</button>
+    </div>
+</form>
+</div>

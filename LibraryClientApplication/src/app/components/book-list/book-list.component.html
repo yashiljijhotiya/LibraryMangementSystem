@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="header">
+        <h2 class="heading">Library Management System</h2>
+        <input type="text" class="search" placeholder="search..."  #title> 
+        <button class="btn" (click) = "search(title)">Submit</button>             
+        <button class="button" (click)="add()">Add </button>
+    </div>
+    <div class="items">
+        <div class="card-item" *ngFor="let book of books$ | async">
+            <img src="../../../assets/image/book_logo.png"
+                class="card-img-top" alt="book Image">
+            <div class="card-body">
+                <h6 class="card-title">{{book.title}}</h6>
+                <p class="card-text">Author : {{book.author}}</p>
+                <p class="card-text">Publisher : {{book.publisher}}</p>
+                <p class="card-text">Price : INR {{book.price}}</p>
+                <p class="card-text">Count : {{book.count}}</p>
+                <div class="tooltip">
+                    <i class="fa fa-info-circle"></i>
+                    <span class="tooltiptext">{{book.description == ''? 'No description' : book.description }}</span>
+                  </div>
+                <button class="btn-icon" (click)="delete(book.id)"><i class="fa fa-trash"></i></button>
+                <button class="btn-icon" (click)="edit(book)"><i class="fas fa-edit"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
